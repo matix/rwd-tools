@@ -27,6 +27,95 @@
     <div id="intro" class="step slide" data-x="0" data-y="0">
         <h1>Responsive Web Design</h1>
         <h2>Tools and Techniques</h2>
+        <div class="devices">
+            <i class="icon-desktop"></i>
+            <i class="icon-laptop"></i>
+            <i class="icon-tablet"></i>
+            <i class="icon-mobile-phone"></i>
+        </div>
+    </div>
+
+    <div id="about" class="step slide" data-x="prev+960/2+10" data-z="-960/2" data-rotate-y="90">
+        <h1>Matias Figueroa</h1>
+        <h2>UI/UX Developer</h2>
+        <h2>Software Designer @ Globant</h2>
+        <h2>Likes to make stuff...</h2>
+
+        <a href="mailto:matias.figueroa@globant.com" target="_blank"><i class="icon-envelope-alt"></i> matias.figueroa@globant.com</a><br>
+        <a href="https://twitter.com/matixfigueroa" target="_blank"><i class="icon-twitter"></i> @matixfigueroa</a><br>
+        <a href="https://github.com/matix" target="_blank"><i class="icon-github"></i> github.com/matix</a>
+
+        <div class="icon-user icon-6 icon-4x slide-icon"></div>
+    </div>
+
+    <div id="definition" class="step slide" data-x="prev+960/2+10" data-z="-960" data-rotate-y="0" data-steps="3">
+        <h1>What's Responsive Web Design?</h1>
+        <p> Responsive Web Design (RWD) is a <strong>Design Strategy</strong> that aims to provide 
+            a deeply <strong>contextualized</strong> experience for the user regardless
+            of the <strong>consumption device</strong> that is currently being used to access our <strong>site</strong>.
+        </p>
+
+        <div class="responsive-anim">
+            <i class="icon-desktop icon-4x"></i>
+            <span class="icon-stack icon-2x">
+              <i class="icon-rotate-right icon-spin icon-stack-base"></i>
+              <i class="icon-user"></i>
+            </span>
+            <i class="icon-mobile-phone icon-4x"></i>
+        </div>
+    </div>
+
+    <div id="not-mobile" class="step slide centered" data-x="prev+960+10" data-rotate-y="0" data-z="-960">
+        <p><i class="icon-mobile-phone icon-6 icon-4x"></i></p>
+        <p><strong>Mobile</strong> Design is centered on <strong>devices</strong>.</p>
+        <h1>&ne;</h1>
+        <p><i class="icon-asterisk icon-6 icon-4x"></i></p>
+        <p><strong>Responsive</strong> Design is centered on <strong>context</strong>.</p>
+    </div>
+
+    <div id="the-basics" class="step slide centered" data-x="prev+960+10" data-rotate-y="0" data-z="-960">
+        <h1>Some Basics:</h1>
+        <ul>
+            <li><i class="icon-li icon-ok"></i> You don't know which device the user is going to use, you aim to cover them <strong>all</strong>.
+            </li>
+            <li><i class="icon-li icon-ok"></i> Make your html <strong>Semantic</strong>, allow for <strong>fallbacks</strong>.</li>
+            <li><i class="icon-li icon-ok"></i> If is not going to be displayed, <strong>don't even download it</strong>.</li>
+            <li><i class="icon-li icon-ok"></i> Horizontal scrolling <strong>is the enemy</strong>.</li>
+            <li><i class="icon-li icon-ok"></i> It's <strong>a lot</strong> of work, decide wisely...</li>
+        </ul>
+
+        <div class="icon-rocket icon-6 icon-4x slide-icon"></div>
+    </div>
+
+    <div id="when-to-rwd" class="step slide centered" data-x="prev+960+10" data-rotate-y="0" data-z="-960">
+        <h1>RWD is for:</h1>
+        <ul>
+            <li><h2><i class="icon-li icon-ok"></i> Simple Web Sites.</h2>
+                <p>Complicated applications with customized workflows are better designed as a separate mobile app.</p>
+            </li>
+            <li><h2><i class="icon-li icon-ok"></i> Modern Web Sites. </h2>
+                <p>Responsive on IE6, Symbian? Are you kidding me?</p>
+            </li>
+            <li><h2><i class="icon-li icon-ok"></i> Ubicous Web Sites. </h2>
+                <p>If no one is going to access your site on a phone or tablet or tv... why bother?</p>
+            </li>
+        </ul>
+
+        <div class="icon-rocket icon-6 icon-4x slide-icon"></div>
+    </div>
+
+    <div id="pillars" class="step slide centered" data-x="prev+960+10" data-rotate-y="0" data-z="-960">
+        <h1>The pillars of RWD:</h1>
+        <ul>
+            <li><h2><i class="icon-li icon-css3"></i> Media Querys.</h2>
+            </li>
+            <li><h2><i class="icon-li icon-th-list"></i> Fluid Grids.</h2>
+            </li>
+            <li><h2><i class="icon-li icon-picture"></i> Responsive Images.</h2>
+            </li>
+        </ul>
+
+        <div class="icon-rocket icon-6 icon-4x slide-icon"></div>
     </div>
 
     <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
@@ -43,7 +132,7 @@ if ("ontouchstart" in document.documentElement) {
     document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
 }
 </script>
-
+<script src="js/impress.preprocess.js"></script>
 <script src="js/impress.js"></script>
 <script>impress().init();</script>
 </body>

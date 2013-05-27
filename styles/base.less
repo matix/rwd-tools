@@ -50,13 +50,8 @@ table {
 body {
     font-family: 'Roboto Slab', serif;
     min-height: 740px;
-    background: rgb(215, 215, 215);
-    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(240, 240, 240)), to(rgb(190, 190, 190)));
-    background: -webkit-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
-    background:    -moz-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
-    background:     -ms-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
-    background:      -o-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
-    background:         radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+
+    .gradient-background( #fff, rgb(215, 215, 215));
 }
 
 b, strong { font-weight: bold }
@@ -66,20 +61,21 @@ i, em { font-style: italic }
 h1 {
     font-size: 2.5em;
     line-height: 1em;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.25em;
+    margin-top: 0.25em;
 }
 
 h2 {
     font-size: 1.5em;
-    line-height: 0.5em;
+    line-height: 1em;
+    margin-bottom: 0.25em;
+    margin-top: 0.25em;
 }
 
 a {
-    color: inherit;
+    color: #00BCF5;
     text-decoration: none;
     padding: 0 0.1em;
-    background: rgba(255,255,255,0.5);
-    text-shadow: -1px -1px 2px rgba(100,100,100,0.9);
     border-radius: 0.2em;
     -webkit-transition: 0.5s;
     -moz-transition:    0.5s;
@@ -90,6 +86,5 @@ a {
 
 a:hover,
 a:focus {
-    background: rgba(255,255,255,1);
-    text-shadow: -1px -1px 2px rgba(100,100,100,0.5);
+    background: 0;
 }

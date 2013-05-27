@@ -1,0 +1,26 @@
+.gradient-background (@from, @to) {
+    background: @from;
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(@from), to(@to));
+    background: -webkit-radial-gradient(@from, @to);
+    background:    -moz-radial-gradient(@from, @to);
+    background:     -ms-radial-gradient(@from, @to);
+    background:      -o-radial-gradient(@from, @to);
+    background:         radial-gradient(@from, @to);
+}
+
+.random-color() {
+  color: `'#'+Math.floor(Math.random()*16777215).toString(16)`;
+}
+
+.transition(@transition){
+    -webkit-transition: @transition;
+    -moz-transition:    @transition;
+    -ms-transition:     @transition;
+    -o-transition:      @transition;
+    transition:         @transition;
+}
+
+.transition-delay(@t) {
+  transition-delay: @t;
+  -webkit-transition-delay: @t;
+}

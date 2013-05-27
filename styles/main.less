@@ -1,6 +1,7 @@
-@import "base";
 @import "util";
+@import "base";
 @import "impress";
+@import "font-awesome/css/font-awesome.css";
 
 .step {
     position: relative;
@@ -19,27 +20,117 @@
 .impress-enabled .step {
     margin: 0;
     opacity: 0.3;
-    -webkit-transition: opacity 1s;
-    -moz-transition:    opacity 1s;
-    -ms-transition:     opacity 1s;
-    -o-transition:      opacity 1s;
-    transition:         opacity 1s;
+    .transition(opacity 1s);
 }
 
 .impress-enabled .step.active { opacity: 1 }
 
 .slide {
     display: block;
-    width: 900px;
+    width: 960px;
     height: 700px;
-    padding: 40px 60px;
+    padding: 20px;
     background-color: white;
-    border: 1px solid rgba(0, 0, 0, .3);
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
-    color: rgb(102, 102, 102);
-    text-shadow: 0 2px 2px rgba(0, 0, 0, .1);
     font-size: 30px;
     line-height: 36px;
-    letter-spacing: -1px;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.5);
+
+    h1, h2 {
+        text-shadow: 0 2px 2px rgba(0, 0, 0, .1);
+    }
+
+    &.centered {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-box-pack: center;
+
+        display: -moz-box;
+        -moz-box-orient: vertical;
+        -moz-box-pack: center;
+
+        display: box;
+        box-orient: vertical;
+        box-pack: center;
+    }
+
+    .slide-icon {
+        position: absolute;
+        right: 1%;
+        bottom: 1%;
+    }
+}
+
+#intro {
+    .devices {
+        position: relative;
+        font-size: 10em;
+        margin-top: 0.3em;
+
+        .icon-desktop      { color: #C9A074; font-size: 1em;    }
+        .icon-laptop       { color: #57C7A8; font-size: 0.75em; }
+        .icon-tablet       { color: #C7578D; font-size: 0.3em;  }
+        .icon-mobile-phone { color: #9972C4; font-size: 0.1em;  }
+    }
+}
+
+#definition {
+    * {
+        .transition(~"all 1s");
+    }
+
+    p {
+        opacity: 0;
+        line-height: 1.6em;
+    }
+    
+    .responsive-anim {
+        opacity: 0;
+        position: absolute;
+        font-size: 1.5em;
+        left: 20%;
+        margin-top: 6%;
+
+        .icon-rotate-right { color: rgba(29, 184, 103, 0.7);}
+    }
+
+    &.step-1 {
+        p { opacity: 1 };
+    }
+
+    &.step-2 {
+        .responsive-anim { opacity: 1 }
+    }
+
+    strong {
+        font-weight: normal;
+        padding: 3px;
+    }
+
+    &.step-3 {
+        strong {
+            color: #00BCF5;
+            border-radius: 6px;
+            font-weight: bold;
+            background-color: #eee;
+        }
+    }
+}
+
+#not-mobile {
+    text-align: center;
+    [class*="icon-"] {
+        color: #5D9FCA;
+    }
+}
+
+#pillars {
+    .icon-css3 {
+        color: #FF7A00;
+    }
+    .icon-th-list {
+        color: #7A00FF;
+    }
+    .icon-picture {
+        color: #FF007A;
+    }
 }

@@ -438,7 +438,7 @@
             window.scrollTo(0, 0);
             
             var step = stepsData["impress-" + el.id];
-            
+
             if ( activeStep ) {
                 activeStep.classList.remove("active");
                 body.classList.remove("impress-on-" + activeStep.id);
@@ -547,13 +547,53 @@
             
             return el;
         };
-        
+
+        //Substeps fix
+        var do_goto = goto;
+        goto = function (el, action, duration) {
+            if(activeStep && action) {
+                var substeps = toNumber(activeStep.dataset.steps, 0);
+                var activeSubstep = toNumber(activeStep.dataset.currentStep, 0);
+                var substepAction = activeStep.dataset.substepAction || "append";
+                if(substeps){                
+                    if(activeSubstep < substeps && activeSubstep >= 0){
+                        var dir = (action=="next")?+1:-1;
+                        if(substepAction == "replace" || action == "prev"){
+                            activeStep.classList.remove("step-" + activeSubstep);
+                        }
+                        var nextSubstep = activeSubstep+dir;
+                        if(nextSubstep > 0) {
+                            activeStep.classList.add("step-" + nextSubstep);
+                            activeStep.dataset.currentStep = nextSubstep;
+                        }
+                        else {
+                            return do_goto(el, duration);
+                        }
+                        return false;
+                    }
+                    else {
+                        for (var i = substeps; i >= 0; i--) {
+                            activeStep.classList.remove("step-" + i);
+                        };
+                        activeStep.dataset.currentStep = null;
+                        return do_goto(el, duration);
+                    }
+                }
+                else {
+                    return do_goto(el, duration);
+                }
+            }
+            else {
+                return do_goto(el, duration);
+            }
+        }
+
         // `prev` API function goes to previous step (in document order)
         var prev = function () {
             var prev = steps.indexOf( activeStep ) - 1;
             prev = prev >= 0 ? steps[ prev ] : steps[ steps.length-1 ];
             
-            return goto(prev);
+            return goto(prev,"prev");
         };
         
         // `next` API function goes to next step (in document order)
@@ -561,7 +601,7 @@
             var next = steps.indexOf( activeStep ) + 1;
             next = next < steps.length ? steps[ next ] : steps[ 0 ];
             
-            return goto(next);
+            return goto(next,"next");
         };
         
         // Adding some useful classes to step elements.
