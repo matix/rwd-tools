@@ -109,7 +109,7 @@
         <ul>
             <li class="s1"><h2><i class="icon-li icon-cogs"></i> Feature Detection.</h2>
             </li>
-            <li class="s2"><h2><i class="icon-li icon-css3"></i> Media Querys.</h2>
+            <li class="s2"><h2><i class="icon-li icon-css3"></i> Media Queries.</h2>
             </li>
             <li class="s3"><h2><i class="icon-li icon-th-list"></i> Fluid Grids.</h2>
             </li>
@@ -185,7 +185,7 @@
     </div>    
 
     <div id="modernizr-js" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
-        <h1>Detect, Use/Not Use:</h1>
+        <h1>Detect, Use/Degrade:</h1>
         <div data-codemirror="true" data-read-only="true" data-mode="javascript">
             if(Modernizr.localstorage) {
                 localstorage.setItem("lastUser", currentUser);
@@ -220,7 +220,7 @@
     </div>
 
     <div id="mq-intro" class="step slide centered" data-x="0" data-y="prev+700+10" data-z="prev+960" data-rotate-y="-90">
-        <h1><i class="icon-css3"></i> Media Querys</h1>
+        <h1><i class="icon-css3"></i> Media queries</h1>
     </div>
 
     <div id="mq-atmedia" class="step slide centered" data-x="prev+960/2+10" data-y="prev" data-z="prev+960/2" 
@@ -332,6 +332,36 @@
             }
         }
         </div>
+    </div>
+
+    <div id="mq-example-2" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
+        <div data-codemirror="true" data-read-only="true" data-mode="css">
+        @media screen and (min-device-width: 800px) {
+            /* Narrow Screen */
+            body {
+                font-size: 1em;
+            }
+            .navigation {
+                width:100%;
+            }
+            .content {
+                width:100%;
+            }
+        }
+        </div>
+    </div>
+
+    <div id="mq-links" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
+        <p>Mozilla Developer Network</p>
+        <p><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries" target="_blank">Media Queries on MDN</a></p>
+        
+        <br>
+        <p>W3C Reference Docs</p>
+        <p><a href="http://www.w3.org/TR/css3-mediaqueries/" target="_blank">Media Queries W3C RFC</a></p>
+        
+        <br>
+        <p>Mediaqueri.es</p>
+        <p><a href="http://mediaqueri.es/" target="_blank">Showcase</a></p>
     </div>
 
     <div id="fg-intro" class="step slide centered" data-x="0" data-y="prev+700+10" data-z="prev+960" data-rotate-y="-90">
