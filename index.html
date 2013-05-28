@@ -188,7 +188,7 @@
         <h1>Detect, Use/Not Use:</h1>
         <div data-codemirror="true" data-read-only="true" data-mode="javascript">
             if(Modernizr.localstorage) {
-                localstorage.set("lastUser", currentUser);
+                localstorage.setItem("lastUser", currentUser);
             }
             else {
                 // Optional, don't scare your users 
@@ -206,7 +206,7 @@
                 test: Modernizr.localstorage,
                 nope:["localstorage-polyfill.js"],
                 complete: function(){
-                    localstorage.set("lastUser", currentUser);
+                    localstorage.setItem("lastUser", currentUser);
                 }
             });
         </div>
