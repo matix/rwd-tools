@@ -9,8 +9,27 @@ module.exports = function(grunt) {
         stripBanners: true
       },
       "source": {
-        src: ['js/**.*js'],
+        options: {
+          separator: ";;"
+        },
+        src: ['js/impress.js',
+              'js/impress.preprocess.js',
+              'node_modules/codemirror/lib/codemirror.js',
+              'node_modules/codemirror/mode/xml/xml.js',
+              'node_modules/codemirror/mode/css/css.js',
+              'node_modules/codemirror/mode/javascript/javascript.js',
+              'node_modules/codemirror/mode/htmlmixed/htmlmixed.js',
+              'js/codemirror.bootstrap.js'
+              ],
         dest: 'js/bundle.js'
+      },
+      "styles": {
+        src: [ 
+          'styles/main.css',
+          'node_modules/codemirror/lib/codemirror.css',
+          'node_modules/codemirror/theme/neat.css'
+        ],
+        dest: "styles/bundle.css"
       }
     },
     less:{
@@ -58,7 +77,7 @@ module.exports = function(grunt) {
       },
       "less": {
         files: 'styles/**.less',
-        tasks: ['less:styles']
+        tasks: ['less:styles', "concat:styles"]
       }
     }
   });
@@ -71,7 +90,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
 
   // Default task.
-  grunt.registerTask('build', ['jshint', 'concat', "less"]);
+  grunt.registerTask('build', ['jshint', 'less', 'concat']);
   grunt.registerTask('default', ['build']);
 
 };

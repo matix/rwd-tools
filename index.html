@@ -10,7 +10,7 @@
     <meta name="author" content="Matias Figueroa" />
 
     <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300' rel='stylesheet' type='text/css'>
-    <link href="styles/main.css" rel="stylesheet" />
+    <link href="styles/bundle.css" rel="stylesheet" />
     
     <link rel="shortcut icon" href="favicon.png" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
@@ -136,7 +136,17 @@
     </div>
 
     <div id="fd-3" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
-        
+        <h1>Set it up...</h1>
+        <textarea data-codemirror="true" data-readonly="true">
+            <!doctype html>
+            <html>
+            <head>
+                ...
+                <script src="modernizr.js"></script>
+            </head>
+            ...
+            </html>
+        </textarea>
     </div>    
 
     <div id="fd-4" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
@@ -237,8 +247,10 @@ if ("ontouchstart" in document.documentElement) {
     document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
 }
 </script>
-<script src="js/impress.preprocess.js"></script>
-<script src="js/impress.js"></script>
-<script>impress().init();</script>
 </body>
+<script type="text/javascript" src="js/bundle.js"></script>
+<script>
+    impress.preprocess();
+    impress().init();
+</script>
 </html>
