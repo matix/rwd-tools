@@ -35,7 +35,7 @@
         </div>
     </div>
 
-    <div id="about" class="step slide" data-x="prev+960/2+10" data-z="-960/2" data-rotate-y="90">
+    <div id="about" class="step slide" data-x="prev+960/2+10" data-z="960/2" data-rotate-y="-90">
         <h1>Matias Figueroa</h1>
         <h2>UI/UX Developer</h2>
         <h2>Software Designer @ Globant</h2>
@@ -48,14 +48,14 @@
         <div class="icon-user icon-6 icon-4x slide-icon"></div>
     </div>
 
-    <div id="definition" class="step slide" data-x="prev+960/2+10" data-z="-960" data-rotate-y="0" data-steps="3">
+    <div id="definition" class="step slide" data-x="prev+960/2+10" data-z="prev+960/2" data-rotate-y="0" data-steps="2">
         <h1>What's Responsive Web Design?</h1>
-        <p> Responsive Web Design (RWD) is a <strong>Design Strategy</strong> that aims to provide 
+        <p class="s1"> Responsive Web Design (RWD) is a <strong>Design Strategy</strong> that aims to provide 
             a deeply <strong>contextualized</strong> experience for the user regardless
             of the <strong>consumption device</strong> that is currently being used to access our <strong>site</strong>.
         </p>
 
-        <div class="responsive-anim">
+        <div class="responsive-anim s1">
             <i class="icon-desktop icon-4x"></i>
             <span class="icon-stack icon-2x">
               <i class="icon-rotate-right icon-spin icon-stack-base"></i>
@@ -65,38 +65,38 @@
         </div>
     </div>
 
-    <div id="not-mobile" class="step slide centered" data-x="prev+960+10" data-rotate-y="0" data-z="-960">
-        <p><i class="icon-mobile-phone icon-6 icon-4x"></i></p>
-        <p><strong>Mobile</strong> Design is centered on <strong>devices</strong>.</p>
-        <h1>&ne;</h1>
-        <p><i class="icon-asterisk icon-6 icon-4x"></i></p>
-        <p><strong>Responsive</strong> Design is centered on <strong>context</strong>.</p>
+    <div id="not-mobile" class="step slide centered" data-x="prev+960+10" data-rotate-y="0" data-z="prev" data-steps="2">
+        <p class="s1"><i class="icon-mobile-phone icon-6 icon-4x"></i></p>
+        <p class="s1"><strong>Mobile</strong> Design is centered on <strong>devices</strong>.</p>
+        <h1 class="s2">&ne;</h1>
+        <p class="s2"><i class="icon-asterisk icon-6 icon-4x"></i></p>
+        <p class="s2"><strong>Responsive</strong> Design is centered on <strong>context</strong>.</p>
     </div>
 
-    <div id="the-basics" class="step slide centered" data-x="prev+960+10" data-rotate-y="0" data-z="-960">
+    <div id="the-basics" class="step slide centered" data-x="prev+960+10" data-rotate-y="0" data-z="prev" data-steps="5">
         <h1>Some Basics:</h1>
         <ul>
-            <li><i class="icon-li icon-ok"></i> You don't know which device the user is going to use, you aim to cover them <strong>all</strong>.
+            <li class="s1"><i class="icon-li icon-ok"></i> You don't know which device the user is going to use, you aim to cover them <strong>all</strong>.
             </li>
-            <li><i class="icon-li icon-ok"></i> Make your html <strong>Semantic</strong>, allow for <strong>fallbacks</strong>.</li>
-            <li><i class="icon-li icon-ok"></i> If is not going to be displayed, <strong>don't even download it</strong>.</li>
-            <li><i class="icon-li icon-ok"></i> Horizontal scrolling <strong>is the enemy</strong>.</li>
-            <li><i class="icon-li icon-ok"></i> It's <strong>a lot</strong> of work, decide wisely...</li>
+            <li class="s2"><i class="icon-li icon-ok"></i> Make your html <strong>Semantic</strong>, allow for <strong>fallbacks</strong>.</li>
+            <li class="s3"><i class="icon-li icon-ok"></i> If is not going to be displayed, <strong>don't even download it</strong>.</li>
+            <li class="s4"><i class="icon-li icon-ok"></i> Horizontal scrolling <strong>is the enemy</strong>.</li>
+            <li class="s5"><i class="icon-li icon-ok"></i> It's <strong>a lot</strong> of work, decide wisely...</li>
         </ul>
 
         <div class="icon-rocket icon-6 icon-4x slide-icon"></div>
     </div>
 
-    <div id="when-to-rwd" class="step slide centered" data-x="prev+960+10" data-rotate-y="0" data-z="-960">
+    <div id="when-to-rwd" class="step slide centered" data-x="prev+960+10" data-rotate-y="0" data-z="prev" data-steps="3">
         <h1>RWD is for:</h1>
         <ul>
-            <li><h2><i class="icon-li icon-ok"></i> Simple Web Sites.</h2>
+            <li class="s1"><h2><i class="icon-li icon-ok"></i> Simple Web Sites.</h2>
                 <p>Complicated applications with customized workflows are better designed as a separate mobile app.</p>
             </li>
-            <li><h2><i class="icon-li icon-ok"></i> Modern Web Sites. </h2>
+            <li class="s2"><h2><i class="icon-li icon-ok"></i> Modern Web Sites. </h2>
                 <p>Responsive on IE6, Symbian? Are you kidding me?</p>
             </li>
-            <li><h2><i class="icon-li icon-ok"></i> Ubicous Web Sites. </h2>
+            <li class="s3"><h2><i class="icon-li icon-ok"></i> Ubiquitous Web Sites. </h2>
                 <p>If no one is going to access your site on a phone or tablet or tv... why bother?</p>
             </li>
         </ul>
@@ -104,21 +104,74 @@
         <div class="icon-rocket icon-6 icon-4x slide-icon"></div>
     </div>
 
-    <div id="pillars" class="step slide centered" data-x="prev+960+10" data-rotate-y="0" data-z="-960">
+    <div id="pillars" class="step slide centered" data-x="prev+960+10" data-rotate-y="0" data-z="prev" data-steps="4">
         <h1>The pillars of RWD:</h1>
         <ul>
-            <li><h2><i class="icon-li icon-css3"></i> Media Querys.</h2>
+            <li class="s1"><h2><i class="icon-li icon-cogs"></i> Feature Detection.</h2>
             </li>
-            <li><h2><i class="icon-li icon-th-list"></i> Fluid Grids.</h2>
+            <li class="s2"><h2><i class="icon-li icon-css3"></i> Media Querys.</h2>
             </li>
-            <li><h2><i class="icon-li icon-picture"></i> Responsive Images.</h2>
+            <li class="s3"><h2><i class="icon-li icon-th-list"></i> Fluid Grids.</h2>
+            </li>
+            <li class="s4"><h2><i class="icon-li icon-picture"></i> Responsive Images.</h2>
             </li>
         </ul>
 
         <div class="icon-rocket icon-6 icon-4x slide-icon"></div>
     </div>
 
-    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+    <div id="fd-intro" class="step slide centered" data-x="0" data-y="prev+700+10" data-z="prev+960" data-rotate-y="-90">
+        <h1><i class="icon-cogs"></i> Feature Detection</h1>
+    </div>
+
+    <div id="modernizr" class="step slide centered" data-x="prev+960/2+10" data-y="prev" data-z="prev+960/2">
+        <img src="images/modernizr-logo.png" alt="Modernizr Logo">
+    </div>
+
+    <div id="modernizr-2" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
+        <img src="images/modernizr-logo.png" alt="Modernizr Logo">
+        <p>Modernizr is a feature detection library thats runs tests against the <strong>context</strong> of your
+           application and tells you what <strong>features</strong> are available for you to use.</p>
+        <p>It also helps you to load <strong>fallbacks</strong> for features that are not present.</p>
+    </div>
+
+    <div id="mq-intro" class="step slide centered" data-x="0" data-y="prev+700+10" data-z="prev+960" data-rotate-y="-90">
+        <h1><i class="icon-css3"></i> Media Querys</h1>
+    </div>
+
+    <div id="mq-2" class="step slide centered" data-x="prev+960/2+10" data-y="prev" data-z="prev+960/2">
+        
+    </div>
+
+    <div id="mq-3" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
+        
+    </div>
+
+    <div id="fg-intro" class="step slide centered" data-x="0" data-y="prev+700+10" data-z="prev+960" data-rotate-y="-90">
+        <h1><i class="icon-th-list"></i> Fluid Grids</h1>
+    </div>
+
+    <div id="fg-2" class="step slide centered" data-x="prev+960/2+10" data-y="prev" data-z="prev+960/2">
+        
+    </div>
+
+    <div id="fg-3" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
+        
+    </div>
+
+    <div id="ri-intro" class="step slide centered" data-x="0" data-y="prev+700+10" data-z="prev+960" data-rotate-y="-90">
+        <h1><i class="icon-picture"></i> Responsive Images</h1>
+    </div>
+
+    <div id="ri-2" class="step slide centered" data-x="prev+960/2+10" data-y="prev" data-z="prev+960/2">
+        
+    </div>
+
+    <div id="ri-3" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
+        
+    </div>
+
+    <div id="overview" class="step" data-x="3000" data-y="1500" data-z="3000" data-scale="10" data-rotate-y="-90">
     </div>
 
 </div>
