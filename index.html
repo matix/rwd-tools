@@ -135,9 +135,9 @@
         <p>It also helps you to load <strong>fallbacks</strong> for features that are not present.</p>
     </div>
 
-    <div id="fd-3" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
+    <div id="modernizr-setup" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
         <h1>Set it up...</h1>
-        <textarea data-codemirror="true" data-readonly="true">
+        <textarea data-codemirror="true" data-read-only="true">
             <!doctype html>
             <html>
             <head>
@@ -149,16 +149,74 @@
         </textarea>
     </div>    
 
-    <div id="fd-4" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
-        
+    <div id="modernizr-profit" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
+        <h1>Profit!</h1>
+        <textarea data-codemirror="true" data-read-only="true">
+            <html class=" js flexbox flexboxlegacy canvas 
+            canvastext webgl no-touch geolocation postmessage 
+            websqldatabase indexeddb hashchange history 
+            draganddrop websockets rgba hsla multiplebgs 
+            backgroundsize borderimage borderradius boxshadow 
+            textshadow opacity cssanimations csscolumns 
+            cssgradients cssreflections csstransforms 
+            csstransforms3d csstransitions fontface 
+            generatedcontent video audio localstorage 
+            sessionstorage webworkers applicationcache 
+            svg inlinesvg smil svgclippaths">
+            ...
+        </textarea>
+    </div> 
+
+    <div id="modernizr-profit-2" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
+        <div data-codemirror="true" data-read-only="true" data-mode="css">
+        /* Simulated box shadow using borders: */
+        .box {
+           border-bottom: 1px solid #666;
+           border-right: 1px solid #777;
+        }
+
+        .boxshadow div.box {
+           border: none;
+           -webkit-box-shadow: #666 1px 1px 1px;
+              -moz-box-shadow: #666 1px 1px 1px;
+                       box-shadow: #666 1px 1px 1px;
+        }
+        </div>
     </div>    
 
-    <div id="fd-5" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
-        
+    <div id="modernizr-js" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
+        <h1>Detect, Use/Not Use:</h1>
+        <div data-codemirror="true" data-read-only="true" data-mode="javascript">
+            if(Modernizr.localstorage) {
+                localstorage.set("lastUser", currentUser);
+            }
+            else {
+                // Optional, don't scare your users 
+                // if is not important!
+                showWarning("Your browser is not able "
+                            +"to remember your session.");
+            }
+        </div>
     </div>    
 
-    <div id="fd-6" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
-        
+    <div id="modernizr-js-2" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
+        <h1>Detect, Polyfill, Use:</h1>
+        <div data-codemirror="true" data-read-only="true" data-mode="javascript">
+            Modernizr.load({
+                test: Modernizr.localstorage,
+                nope:["localstorage-polyfill.js"],
+                complete: function(){
+                    localstorage.set("lastUser", currentUser);
+                }
+            });
+        </div>
+    </div>
+
+    <div id="modernizr-links" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
+        <p><a href="http://modernizr.com/">modernizr.com</a></p>
+        <br>
+        <p>So much more... check:</p>
+        <p><a href="http://modernizr.com/docs">modernizr.com/docs/</a></p>
     </div>
 
     <div id="mq-intro" class="step slide centered" data-x="0" data-y="prev+700+10" data-z="prev+960" data-rotate-y="-90">
