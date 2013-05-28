@@ -20,7 +20,7 @@
 .impress-enabled .step {
     margin: 0;
     opacity: 0.3;
-    .transition(opacity 1s);
+    .transition(~"opacity 1s");
 }
 
 .impress-enabled .step.active { opacity: 1 }
@@ -148,7 +148,13 @@
 }
 
 .impress-on-overview {
-    .step[id*="-intro"] {
+    .step[id*="intro"] {
         opacity: 1;
+    }
+
+    //Rotation flickering fix
+    .step:not([data-rotate-y]),
+    .step[data-rotate-y="0"] {
+       opacity: 0;
     }
 }
