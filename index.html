@@ -223,24 +223,115 @@
         <h1><i class="icon-css3"></i> Media Querys</h1>
     </div>
 
-    <div id="mq-2" class="step slide centered" data-x="prev+960/2+10" data-y="prev" data-z="prev+960/2">
-        
+    <div id="mq-atmedia" class="step slide centered" data-x="prev+960/2+10" data-y="prev" data-z="prev+960/2" 
+                                                     data-steps="3" data-substep-action="replace">
+        <h1 class="base"> @media</h1>
+        <h1 class="s1"> @media <span class="mq">screen</span></h1>
+        <h1 class="s2"> @media <span class="mq">print</span></h1>
+        <h1 class="s3"> @media <span class="mq">screen and <br>(min-width: 800px)</span></h1>
+
+        <div class="s3 icon-html5 icon-6 icon-4x slide-icon"></div>
     </div>
 
-    <div id="mq-3" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
-        
+    <div id="mq-breakpoints" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev" data-steps="6">
+        <h1>Breakpoints:</h1>
+        <table class="breakpoints">
+            <tr class="s1">
+                <td><i class="icon-print"></i></td>
+                <td><span class="mq">@media print</span></td>
+            </tr>
+            <tr class="s2">
+                <td><i class="icon-desktop"></i> <i class="icon-laptop"></i></td>
+                <td><span class="mq">@media screen and (min-width: 1024px)</span></td>
+            </tr>
+            <tr class="s3">
+                <td><i class="icon-tablet"></i></td>
+                <td><span class="mq">@media screen and (min-width: 960px)</span></td>
+            </tr>
+            <tr class="s4">
+                <td><i class="icon-mobile-phone"></i></td>
+                <td><span class="mq">@media screen and (min-width: 800px)</span></td>
+            </tr>
+            <tr class="s5">
+                <td><i class="icon-asterisk"></i></td>
+                <td><span class="mq">base styles (no @media)</span></td>
+            </tr>
+        </table>
+        <br>
+        <p class="s6">This is not carved in stone... research your target breakpoints.</p>
     </div>    
 
-    <div id="mq-4" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
-        
+    <div id="mq-breakpoints-2" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev" data-steps="1">
+        <h1>Careful...</h1>
+        <table class="breakpoints s1">
+            <tr>
+                <td><i class="icon-print"></i></td>
+                <td><span class="mq">@media print</span></td>
+            </tr>
+            <tr>
+                <td><i class="icon-desktop"></i> <i class="icon-laptop"></i></td>
+                <td><span class="mq">@media screen and (min<span class="hl">-device</span>-width: 1024px)</span></td>
+            </tr>
+            <tr>
+                <td><i class="icon-tablet"></i></td>
+                <td><span class="mq">@media screen and (min<span class="hl">-device</span>-width: 960px)</span></td>
+            </tr>
+            <tr>
+                <td><i class="icon-mobile-phone"></i></td>
+                <td><span class="mq">@media screen and (min<span class="hl">-device</span>-width: 800px)</span></td>
+            </tr>
+            <tr>
+                <td><i class="icon-asterisk"></i></td>
+                <td><span class="mq">base styles (no @media)</span></td>
+            </tr>
+        </table>
     </div>    
 
-    <div id="mq-5" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
-        
+    <div id="mq-breakpoints-3" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev" data-steps="2">
+        <h1>Actually...</h1>
+        <table class="breakpoints s1">
+            <tr>
+                <td><i class="icon-print"></i></td>
+                <td><span class="mq">@media print</span></td>
+            </tr>
+            <tr>
+                <td><i class="icon-asterisk"></i></td>
+                <td><span class="mq">@media screen and (min-device-width: 1024px)</span></td>
+            </tr>
+            <tr>
+                <td><i class="icon-asterisk"></i></td>
+                <td><span class="mq">@media screen and (min-device-width: 960px)</span></td>
+            </tr>
+            <tr>
+                <td><i class="icon-asterisk"></i></td>
+                <td><span class="mq">@media screen and (min-device-width: 800px)</span></td>
+            </tr>
+            <tr>
+                <td><i class="icon-asterisk"></i></td>
+                <td><span class="mq">base styles (no @media)</span></td>
+            </tr>
+        </table>
+        <br>
+        <p class="s2">We care about <strong>context</strong>, not <strong>devices</strong>.</p>
     </div>    
 
-    <div id="mq-6" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
-        
+    <div id="mq-example" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
+        <div data-codemirror="true" data-read-only="true" data-mode="css">
+        @media screen and (min-device-width: 1024px) {
+            /* Widescreen */
+            body {
+                font-size: 1.5em;
+            }
+            .navigation {
+                float: left;
+                width:30%;
+            }
+            .content {
+                float: left;
+                width:70%;
+            }
+        }
+        </div>
     </div>
 
     <div id="fg-intro" class="step slide centered" data-x="0" data-y="prev+700+10" data-z="prev+960" data-rotate-y="-90">
