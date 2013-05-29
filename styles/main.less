@@ -40,6 +40,10 @@
         text-shadow: 0 2px 2px rgba(0, 0, 0, .1);
     }
 
+    img {
+        max-width: 100%;
+    }
+
     &.centered {
         display: -webkit-box;
         -webkit-box-orient: vertical;
@@ -189,6 +193,31 @@
         color: darken(#FF7A00, 20%);
         td {
             padding: 0.1em 0.5em;
+        }
+    }
+}
+
+#fg-table-layout {
+    .image {
+        border-radius: 5px;
+        overflow: hidden;
+        max-height: 70%;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+#fg-many-options {
+    text-align: center;
+    .css-grid-fw {
+        display: inline-block;
+        width: (960px-40px)/4;
+        li {
+            margin-top: 0.5em;
+            img {
+                width: 100%;
+            }
         }
     }
 }
