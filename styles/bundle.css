@@ -271,6 +271,9 @@ a:focus {
 .slide h2 {
   text-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
 }
+.slide img {
+  max-width: 100%;
+}
 .slide.centered {
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -407,6 +410,33 @@ a:focus {
 #mq-breakpoints-2 .breakpoints td .hl,
 #mq-breakpoints-3 .breakpoints td .hl {
   color: #FF7A00;
+}
+#mq-features .features {
+  color: #994900;
+}
+#mq-features .features td {
+  padding: 0.1em 0.5em;
+}
+#fg-table-layout .image {
+  border-radius: 5px;
+  overflow: hidden;
+  max-height: 70%;
+}
+#fg-table-layout .image img {
+  width: 100%;
+}
+#fg-many-options {
+  text-align: center;
+}
+#fg-many-options .css-grid-fw {
+  display: inline-block;
+  width: 230px;
+}
+#fg-many-options .css-grid-fw li {
+  margin-top: 0.5em;
+}
+#fg-many-options .css-grid-fw li img {
+  width: 100%;
 }
 .impress-on-overview .step[id*="intro"] {
   opacity: 1;
