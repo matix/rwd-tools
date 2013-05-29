@@ -24,7 +24,7 @@ module.exports = function(grunt) {
         dest: 'js/bundle.js'
       },
       "styles": {
-        src: [ 
+        src: [
           'styles/main.css',
           'node_modules/codemirror/lib/codemirror.css',
           'node_modules/codemirror/theme/neat.css'
@@ -79,6 +79,21 @@ module.exports = function(grunt) {
         files: 'styles/**.less',
         tasks: ['less:styles', "concat:styles"]
       }
+    },
+    publish: {
+      "gh-pages": {
+        dest: "gh-pages",
+        src: [
+          "images/*.*",
+          "styles/font-awesome/font/**.*",
+          "styles/font-awesome/css/font-awesome.css",
+          "styles/bundle.css",
+          "js/bundle.js", 
+          "demos/**.*",
+          "index.html",
+          "README.md"
+        ]
+      }
     }
   });
 
@@ -88,6 +103,17 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-less');
+
+  // Publish distrubution files
+  grunt.registerMultiTask("publish", function () {
+      this.files.forEach(function (file) {
+
+        file.src.forEach(function (srcfile) {
+          grunt.file.copy(srcfile, file.dest + "/" + srcfile);
+        });
+
+      });
+  });
 
   // Default task.
   grunt.registerTask('build', ['jshint', 'less', 'concat']);

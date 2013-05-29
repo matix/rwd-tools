@@ -1,6 +1,7 @@
 .DS_Store
 npm-debug.log
 node_modules
+gh-pages
 js/bundle.js
 styles/bundle.css
 styles/main.css
