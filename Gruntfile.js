@@ -41,9 +41,9 @@ module.exports = function(grunt) {
       }
     },
     uglify: {
-      "dist": {
-        src: '<%= concat.dist.dest %>',
-        dest: 'dist/bundle.min.js'
+      "source": {
+        src: '<%= concat.source.dest %>',
+        dest: 'js/bundle.min.js'
       }
     },
     jshint: {
@@ -89,7 +89,7 @@ module.exports = function(grunt) {
           "styles/font-awesome/css/font-awesome.css",
           "styles/bundle.css",
           "js/bundle.js", 
-          "demos/**.*",
+          "demos/**/**.*",
           "index.html",
           "README.md"
         ]
