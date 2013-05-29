@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Responsive Web Design - Tools and Techniques</title>
+    
+    <meta name="description" content="" />
+    <meta name="author" content="Matias Figueroa" />
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300' rel='stylesheet' type='text/css'>
+    <link href="styles/bundle.css" rel="stylesheet" />
+    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+
+<body class="impress-not-supported">
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<div id="impress">
+
+    <div id="intro" class="step slide" data-x="0" data-y="0">
+        <h1>Responsive Web Design</h1>
+        <h2>Tools and Techniques</h2>
+        <div class="devices">
+            <i class="icon-desktop"></i>
+            <i class="icon-laptop"></i>
+            <i class="icon-tablet"></i>
+            <i class="icon-mobile-phone"></i>
+        </div>
+    </div>
+
+    <div id="about" class="step slide" data-x="prev+960/2+10" data-z="960/2" data-rotate-y="-90">
+        <h1>Matias Figueroa</h1>
+        <h2>UI/UX Developer</h2>
+        <h2>Software Designer @ Globant</h2>
+        <h2>Likes to make stuff...</h2>
+
+        <a href="mailto:matias.figueroa@globant.com" target="_blank"><i class="icon-envelope-alt"></i> matias.figueroa@globant.com</a><br>
+        <a href="https://twitter.com/matixfigueroa" target="_blank"><i class="icon-twitter"></i> @matixfigueroa</a><br>
+        <a href="https://github.com/matix" target="_blank"><i class="icon-github"></i> github.com/matix</a>
+
+        <div class="icon-user icon-6 icon-4x slide-icon"></div>
+    </div>
+
+    <div id="definition" class="step slide" data-x="prev+960/2+10" data-z="prev+960/2" data-rotate-y="0" data-steps="2">
+        <h1>What's Responsive Web Design?</h1>
+        <p class="s1"> Responsive Web Design (RWD) is a <strong>Design Strategy</strong> that aims to provide 
+            a deeply <strong>contextualized</strong> experience for the user regardless
+            of the <strong>consumption device</strong> that is currently being used to access our <strong>site</strong>.
+        </p>
+
+        <div class="responsive-anim s1">
+            <i class="icon-desktop icon-4x"></i>
+            <span class="icon-stack icon-2x">
+              <i class="icon-rotate-right icon-spin icon-stack-base"></i>
+              <i class="icon-user"></i>
+            </span>
+            <i class="icon-mobile-phone icon-4x"></i>
+        </div>
+    </div>
+
+    <div id="not-mobile" class="step slide centered" data-x="prev+960+10" data-rotate-y="0" data-z="prev" data-steps="2">
+        <p class="s1"><i class="icon-mobile-phone icon-6 icon-4x"></i></p>
+        <p class="s1"><strong>Mobile</strong> Design is centered on <strong>devices</strong>.</p>
+        <h1 class="s2">&ne;</h1>
+        <p class="s2"><i class="icon-asterisk icon-6 icon-4x"></i></p>
+        <p class="s2"><strong>Responsive</strong> Design is centered on <strong>context</strong>.</p>
+    </div>
+
+    <div id="the-basics" class="step slide centered" data-x="prev+960+10" data-rotate-y="0" data-z="prev" data-steps="5">
+        <h1>Some Basics:</h1>
+        <ul>
+            <li class="s1"><i class="icon-li icon-ok"></i> You don't know which device the user is going to use, you aim to cover them <strong>all</strong>.
+            </li>
+            <li class="s2"><i class="icon-li icon-ok"></i> Make your html <strong>Semantic</strong>, allow for <strong>fallbacks</strong>.</li>
+            <li class="s3"><i class="icon-li icon-ok"></i> If is not going to be displayed, <strong>don't even download it</strong>.</li>
+            <li class="s4"><i class="icon-li icon-ok"></i> Horizontal scrolling <strong>is the enemy</strong>.</li>
+            <li class="s5"><i class="icon-li icon-ok"></i> It's <strong>a lot</strong> of work, decide wisely...</li>
+        </ul>
+
+        <div class="icon-rocket icon-6 icon-4x slide-icon"></div>
+    </div>
+
+    <div id="when-to-rwd" class="step slide centered" data-x="prev+960+10" data-rotate-y="0" data-z="prev" data-steps="3">
+        <h1>RWD is for:</h1>
+        <ul>
+            <li class="s1"><h2><i class="icon-li icon-ok"></i> Simple Web Sites.</h2>
+                <p>Complicated applications with customized workflows are better designed as a separate mobile app.</p>
+            </li>
+            <li class="s2"><h2><i class="icon-li icon-ok"></i> Modern Web Sites. </h2>
+                <p>Responsive on IE6, Symbian? Are you kidding me?</p>
+            </li>
+            <li class="s3"><h2><i class="icon-li icon-ok"></i> Ubiquitous Web Sites. </h2>
+                <p>If no one is going to access your site on a phone or tablet or tv... why bother?</p>
+            </li>
+        </ul>
+
+        <div class="icon-rocket icon-6 icon-4x slide-icon"></div>
+    </div>
+
+    <div id="pillars" class="step slide centered" data-x="prev+960+10" data-rotate-y="0" data-z="prev" data-steps="4">
+        <h1>The pillars of RWD:</h1>
+        <ul>
+            <li class="s1"><h2><i class="icon-li icon-cogs"></i> Feature Detection.</h2>
+            </li>
+            <li class="s2"><h2><i class="icon-li icon-css3"></i> Media Queries.</h2>
+            </li>
+            <li class="s3"><h2><i class="icon-li icon-th-list"></i> Fluid Grids.</h2>
+            </li>
+            <li class="s4"><h2><i class="icon-li icon-picture"></i> Responsive Images.</h2>
+            </li>
+        </ul>
+
+        <div class="icon-rocket icon-6 icon-4x slide-icon"></div>
+    </div>
+
+    <div id="fd-intro" class="step slide centered" data-x="0" data-y="prev+700+10" data-z="prev+960" data-rotate-y="-90">
+        <h1><i class="icon-cogs"></i> Feature Detection</h1>
+    </div>
+
+    <div id="modernizr" class="step slide centered" data-x="prev+960/2+10" data-y="prev" data-z="prev+960/2">
+        <img src="images/modernizr-logo.png" alt="Modernizr Logo">
+    </div>
+
+    <div id="modernizr-2" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
+        <img src="images/modernizr-logo.png" alt="Modernizr Logo">
+        <p>Modernizr is a feature detection library thats runs tests against the <strong>context</strong> of your
+           application and tells you what <strong>features</strong> are available for you to use.</p>
+        <p>It also helps you to load <strong>fallbacks</strong> for features that are not present.</p>
+    </div>
+
+    <div id="modernizr-setup" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
+        <h1>Set it up...</h1>
+        <textarea data-codemirror="true" data-read-only="true">
+            <!doctype html>
+            <html>
+            <head>
+                ...
+                <script src="modernizr.js"></script>
+            </head>
+            ...
+            </html>
+        </textarea>
+    </div>    
+
+    <div id="modernizr-profit" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
+        <h1>Profit!</h1>
+        <textarea data-codemirror="true" data-read-only="true">
+            <html class=" js flexbox flexboxlegacy canvas 
+            canvastext webgl no-touch geolocation postmessage 
+            websqldatabase indexeddb hashchange history 
+            draganddrop websockets rgba hsla multiplebgs 
+            backgroundsize borderimage borderradius boxshadow 
+            textshadow opacity cssanimations csscolumns 
+            cssgradients cssreflections csstransforms 
+            csstransforms3d csstransitions fontface 
+            generatedcontent video audio localstorage 
+            sessionstorage webworkers applicationcache 
+            svg inlinesvg smil svgclippaths">
+            ...
+        </textarea>
+    </div> 
+
+    <div id="modernizr-profit-2" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
+        <div data-codemirror="true" data-read-only="true" data-mode="css">
+        /* Simulated box shadow using borders: */
+        .box {
+           border-bottom: 1px solid #666;
+           border-right: 1px solid #777;
+        }
+
+        .boxshadow div.box {
+           border: none;
+           -webkit-box-shadow: #666 1px 1px 1px;
+              -moz-box-shadow: #666 1px 1px 1px;
+                       box-shadow: #666 1px 1px 1px;
+        }
+        </div>
+    </div>    
+
+    <div id="modernizr-js" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
+        <h1>Detect, Use/Degrade:</h1>
+        <div data-codemirror="true" data-read-only="true" data-mode="javascript">
+            if(Modernizr.localstorage) {
+                localstorage.setItem("lastUser", currentUser);
+            }
+            else {
+                // Optional, don't scare your users 
+                // if is not important!
+                showWarning("Your browser is not able "
+                            +"to remember your session.");
+            }
+        </div>
+    </div>    
+
+    <div id="modernizr-js-2" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
+        <h1>Detect, Polyfill, Use:</h1>
+        <div data-codemirror="true" data-read-only="true" data-mode="javascript">
+            Modernizr.load({
+                test: Modernizr.localstorage,
+                nope:["localstorage-polyfill.js"],
+                complete: function(){
+                    localstorage.setItem("lastUser", currentUser);
+                }
+            });
+        </div>
+    </div>
+
+    <div id="modernizr-links" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
+        <p><a href="http://modernizr.com/">modernizr.com</a></p>
+        <br>
+        <p>So much more... check:</p>
+        <p><a href="http://modernizr.com/docs">modernizr.com/docs/</a></p>
+    </div>
+
+    <div id="mq-intro" class="step slide centered" data-x="0" data-y="prev+700+10" data-z="prev+960" data-rotate-y="-90">
+        <h1><i class="icon-css3"></i> Media queries</h1>
+    </div>
+
+    <div id="mq-atmedia" class="step slide centered" data-x="prev+960/2+10" data-y="prev" data-z="prev+960/2" 
+                                                     data-steps="3" data-substep-action="replace">
+        <h1 class="base"> @media</h1>
+        <h1 class="s1"> @media <span class="mq">screen</span></h1>
+        <h1 class="s2"> @media <span class="mq">print</span></h1>
+        <h1 class="s3"> @media <span class="mq">screen and <br>(min-width: 800px)</span></h1>
+
+        <div class="s3 icon-html5 icon-6 icon-4x slide-icon"></div>
+    </div>
+
+    <div id="mq-breakpoints" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev" data-steps="6">
+        <h1>Breakpoints:</h1>
+        <table class="breakpoints">
+            <tr class="s1">
+                <td><i class="icon-print"></i></td>
+                <td><span class="mq">@media print</span></td>
+            </tr>
+            <tr class="s2">
+                <td><i class="icon-desktop"></i> <i class="icon-laptop"></i></td>
+                <td><span class="mq">@media screen and (min-width: 1024px)</span></td>
+            </tr>
+            <tr class="s3">
+                <td><i class="icon-tablet"></i></td>
+                <td><span class="mq">@media screen and (min-width: 960px)</span></td>
+            </tr>
+            <tr class="s4">
+                <td><i class="icon-mobile-phone"></i></td>
+                <td><span class="mq">@media screen and (min-width: 800px)</span></td>
+            </tr>
+            <tr class="s5">
+                <td><i class="icon-asterisk"></i></td>
+                <td><span class="mq">base styles (no @media)</span></td>
+            </tr>
+        </table>
+        <br>
+        <p class="s6">This is not carved in stone... research your target breakpoints.</p>
+    </div>    
+
+    <div id="mq-breakpoints-2" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev" data-steps="1">
+        <h1>Careful...</h1>
+        <table class="breakpoints s1">
+            <tr>
+                <td><i class="icon-print"></i></td>
+                <td><span class="mq">@media print</span></td>
+            </tr>
+            <tr>
+                <td><i class="icon-desktop"></i> <i class="icon-laptop"></i></td>
+                <td><span class="mq">@media screen and (min<span class="hl">-device</span>-width: 1024px)</span></td>
+            </tr>
+            <tr>
+                <td><i class="icon-tablet"></i></td>
+                <td><span class="mq">@media screen and (min<span class="hl">-device</span>-width: 960px)</span></td>
+            </tr>
+            <tr>
+                <td><i class="icon-mobile-phone"></i></td>
+                <td><span class="mq">@media screen and (min<span class="hl">-device</span>-width: 800px)</span></td>
+            </tr>
+            <tr>
+                <td><i class="icon-asterisk"></i></td>
+                <td><span class="mq">base styles (no @media)</span></td>
+            </tr>
+        </table>
+    </div>    
+
+    <div id="mq-breakpoints-3" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev" data-steps="2">
+        <h1>Actually...</h1>
+        <table class="breakpoints s1">
+            <tr>
+                <td><i class="icon-print"></i></td>
+                <td><span class="mq">@media print</span></td>
+            </tr>
+            <tr>
+                <td><i class="icon-asterisk"></i></td>
+                <td><span class="mq">@media screen and (min-device-width: 1024px)</span></td>
+            </tr>
+            <tr>
+                <td><i class="icon-asterisk"></i></td>
+                <td><span class="mq">@media screen and (min-device-width: 960px)</span></td>
+            </tr>
+            <tr>
+                <td><i class="icon-asterisk"></i></td>
+                <td><span class="mq">@media screen and (min-device-width: 800px)</span></td>
+            </tr>
+            <tr>
+                <td><i class="icon-asterisk"></i></td>
+                <td><span class="mq">base styles (no @media)</span></td>
+            </tr>
+        </table>
+        <br>
+        <p class="s2">We care about <strong>context</strong>, not <strong>devices</strong>.</p>
+    </div>    
+
+    <div id="mq-example" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
+        <div data-codemirror="true" data-read-only="true" data-mode="css">
+        @media screen and (min-device-width: 1024px) {
+            /* Widescreen */
+            body {
+                font-size: 1.5em;
+            }
+            .navigation {
+                float: left;
+                width:30%;
+            }
+            .content {
+                float: left;
+                width:70%;
+            }
+        }
+        </div>
+    </div>
+
+    <div id="mq-example-2" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
+        <div data-codemirror="true" data-read-only="true" data-mode="css">
+        @media screen and (min-device-width: 800px) {
+            /* Narrow Screen */
+            body {
+                font-size: 1em;
+            }
+            .navigation {
+                width:100%;
+            }
+            .content {
+                width:100%;
+            }
+        }
+        </div>
+    </div>
+
+    <div id="mq-links" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
+        <p>Mozilla Developer Network</p>
+        <p><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries" target="_blank">Media Queries on MDN</a></p>
+        
+        <br>
+        <p>W3C Reference Docs</p>
+        <p><a href="http://www.w3.org/TR/css3-mediaqueries/" target="_blank">Media Queries W3C RFC</a></p>
+        
+        <br>
+        <p>Mediaqueri.es</p>
+        <p><a href="http://mediaqueri.es/" target="_blank">Showcase</a></p>
+    </div>
+
+    <div id="fg-intro" class="step slide centered" data-x="0" data-y="prev+700+10" data-z="prev+960" data-rotate-y="-90">
+        <h1><i class="icon-th-list"></i> Fluid Grids</h1>
+    </div>
+
+    <div id="fg-2" class="step slide centered" data-x="prev+960/2+10" data-y="prev" data-z="prev+960/2">
+        
+    </div>
+
+    <div id="fg-3" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
+        
+    </div>
+
+    <div id="fg-4" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
+        
+    </div>    
+
+    <div id="fg-5" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
+        
+    </div>    
+
+    <div id="fg-6" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
+        
+    </div>
+
+    <div id="ri-intro" class="step slide centered" data-x="0" data-y="prev+700+10" data-z="prev+960" data-rotate-y="-90">
+        <h1><i class="icon-picture"></i> Responsive Images</h1>
+    </div>
+
+    <div id="ri-2" class="step slide centered" data-x="prev+960/2+10" data-y="prev" data-z="prev+960/2">
+        
+    </div>
+
+    <div id="ri-3" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
+        
+    </div>
+
+    <div id="ri-4" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
+        
+    </div>    
+
+    <div id="ri-5" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
+        
+    </div>    
+
+    <div id="ri-6" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
+        
+    </div>
+
+    <div id="overview" class="step" data-x="3000" data-y="1500" data-z="3000" data-scale="9" data-rotate-y="-90">
+    </div>
+
+</div>
+
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+</body>
+<script type="text/javascript" src="js/bundle.js"></script>
+<script>
+    impress.preprocess();
+    impress().init();
+</script>
+</html>
