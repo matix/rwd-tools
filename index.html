@@ -213,10 +213,14 @@
     </div>
 
     <div id="modernizr-links" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
-        <p><a href="http://modernizr.com/">modernizr.com</a></p>
+        <p>Check it out:</p>
+        <p><a href="http://modernizr.com/" target="_blank">modernizr.com</a></p>
+        <br>
+        <p>Contribute:</p>
+        <p><a href="https://github.com/Modernizr/Modernizr" target="_blank">github.com/Modernizr</a></p>
         <br>
         <p>So much more... check:</p>
-        <p><a href="http://modernizr.com/docs">modernizr.com/docs/</a></p>
+        <p><a href="http://modernizr.com/docs" target="_blank">modernizr.com/docs/</a></p>
     </div>
 
     <div id="mq-intro" class="step slide centered" data-x="0" data-y="prev+700+10" data-z="prev+960" data-rotate-y="-90">
@@ -261,7 +265,7 @@
         <p class="s6">This is not carved in stone... research your target breakpoints.</p>
     </div>    
 
-    <div id="mq-breakpoints-2" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev" data-steps="1">
+    <div id="mq-breakpoints-2" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev" data-steps="2">
         <h1>Careful...</h1>
         <table class="breakpoints s1">
             <tr>
@@ -285,6 +289,9 @@
                 <td><span class="mq">base styles (no @media)</span></td>
             </tr>
         </table>
+
+        <br>
+        <p class="s2">...devices lie... sometimes twice.</p>
     </div>    
 
     <div id="mq-breakpoints-3" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev" data-steps="2">
@@ -349,6 +356,55 @@
             }
         }
         </div>
+    </div>
+
+    <div id="mq-example-3" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
+        <h1>Even Better:</h1>
+        <textarea data-codemirror="true" data-read-only="true">
+        <!doctype html>
+        <head>
+            <link href="base.css" ...>
+            <link href="1024.css" 
+                  media="screen and (min-width:1024px)" ...>
+            <link href="800.css"
+                  media="screen and (min-width:800px)"  ...>
+        </head>
+        ...
+        </textarea>
+    </div>
+
+    <div id="mq-features" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev" data-steps="1">
+        <h1>Much more:</h1>
+        <table class="features">
+            <tr>
+                <td>width</td>
+                <td>height</td>
+            </tr>
+            <tr>
+                <td>device-width</td>
+                <td>device-height</td>
+            </tr>
+            <tr>
+                <td>aspect-ratio</td>
+                <td>device-aspect-ratio</td>
+            </tr>
+            <tr>
+                <td>color</td>
+                <td>monochrome</td>
+                <td>color-index</td>
+            </tr>
+            <tr>
+                <td>resolution</td>
+                <td>orientation</td>
+            </tr>
+            <tr>
+                <td>scan</td>
+                <td>grid</td>
+            </tr>
+        </table>
+        
+        <br>
+        <p class="s1"> ... and more comming...</p>
     </div>
 
     <div id="mq-links" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
