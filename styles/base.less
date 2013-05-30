@@ -53,7 +53,7 @@ body {
 
     background-image: url('../images/bg.jpg');
 
-    &.imprees-supported{
+    &.impress-supported{
         background-repeat: no-repeat;
     }
 }
@@ -81,14 +81,10 @@ a {
     text-decoration: none;
     padding: 0 0.1em;
     border-radius: 0.2em;
-    -webkit-transition: 0.5s;
-    -moz-transition:    0.5s;
-    -ms-transition:     0.5s;
-    -o-transition:      0.5s;
-    transition:         0.5s;
+    .transition(~"0.5s");
 }
 
 a:hover,
 a:focus {
-    background: 0;
+    background-color: #eee;
 }
