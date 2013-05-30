@@ -8015,7 +8015,7 @@ CodeMirror.defineMIME("text/html", "htmlmixed");
             options.mode = element.dataset.mode || "htmlmixed";
             options.readOnly = element.dataset.readOnly == "true";
             options.theme = "neat";
-            options.lineNumbers = true;
+            //options.lineNumbers = true;
 
             var editor;
 
@@ -8023,6 +8023,9 @@ CodeMirror.defineMIME("text/html", "htmlmixed");
                 var formattedValue = formatTemplate(element.value) || "";
                 editor = CodeMirror.fromTextArea(element, options);
                 editor.setValue(formattedValue);
+                if(element.className) {
+                    editor.display.wrapper.classList.add(element.className);
+                }
             }
             else {
                 options.value = formatTemplate(element.innerHTML) || "";

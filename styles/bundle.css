@@ -127,7 +127,7 @@ body {
   min-height: 740px;
   background-image: url('../images/bg.jpg');
 }
-body.imprees-supported {
+body.impress-supported {
   background-repeat: no-repeat;
 }
 b,
@@ -163,7 +163,7 @@ a {
 }
 a:hover,
 a:focus {
-  background: 0;
+  background-color: #eee;
 }
 .fallback-message {
   font-family: sans-serif;
@@ -439,6 +439,9 @@ a:focus {
 }
 #fg-many-options .css-grid-fw li img {
   width: 100%;
+}
+#ri-booya .style {
+  color: #FF007A;
 }
 .impress-on-overview .step[id*="intro"] {
   opacity: 1;
