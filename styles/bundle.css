@@ -382,15 +382,15 @@ a:focus {
 #modernizr-2 img {
   max-width: 35%;
 }
-#mq-atmedia h1.s1,
-#mq-atmedia h1.s2,
-#mq-atmedia h1.s3,
-#mq-atmedia h1.base {
-  position: absolute;
-  top: 40%;
-}
 #mq-atmedia .mq {
   color: #FF7A00;
+}
+.impress-supported #mq-atmedia h1.s1,
+.impress-supported #mq-atmedia h1.s2,
+.impress-supported #mq-atmedia h1.s3,
+.impress-supported #mq-atmedia h1.base {
+  position: absolute;
+  top: 40%;
 }
 #mq-breakpoints [class*="icon-"],
 #mq-breakpoints-2 [class*="icon-"],
