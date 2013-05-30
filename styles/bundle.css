@@ -126,6 +126,8 @@ body {
   font-family: 'Roboto Slab', serif;
   min-height: 740px;
   background-image: url('../images/bg.jpg');
+}
+body.imprees-supported {
   background-repeat: no-repeat;
 }
 b,
@@ -294,7 +296,7 @@ a:focus {
   height: auto;
   max-height: 660px;
 }
-.s1,  .s2,  .s3,  .s4,  .s5,  .s6,  .s7,  .s8,  .s9,  .s10 {
+.impress-supported .s1, .impress-supported .s2, .impress-supported .s3, .impress-supported .s4, .impress-supported .s5, .impress-supported .s6, .impress-supported .s7, .impress-supported .s8, .impress-supported .s9, .impress-supported .s10 {
   opacity: 0;
   -webkit-transition: all 1s;
   -moz-transition: all 1s;
@@ -302,7 +304,7 @@ a:focus {
   -o-transition: all 1s;
   transition: all 1s;
 }
-.step-1 .s1, .step-2 .s2, .step-3 .s3, .step-4 .s4, .step-5 .s5, .step-6 .s6, .step-7 .s7, .step-8 .s8, .step-9 .s9, .step-10 .s10 {
+.impress-supported .step-1 .s1, .impress-supported .step-2 .s2, .impress-supported .step-3 .s3, .impress-supported .step-4 .s4, .impress-supported .step-5 .s5, .impress-supported .step-6 .s6, .impress-supported .step-7 .s7, .impress-supported .step-8 .s8, .impress-supported .step-9 .s9, .impress-supported .step-10 .s10 {
   opacity: 1;
 }
 #intro .devices {

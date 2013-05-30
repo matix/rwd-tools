@@ -8078,13 +8078,20 @@ CodeMirror.defineMIME("text/html", "htmlmixed");
 
     document.addEventListener("DOMContentLoaded", function () {
         var steps = Array.prototype.slice.call(document.getElementsByClassName("step"));
-        steps.forEach(function (step, i) {
-            step.addEventListener("impress:stepleave", function () {
-                steps[i+1] && initCodeMirrorInstances(steps[i+1]);
+
+        if(impress.supported) {
+            steps.forEach(function (step, i) {
+                step.addEventListener("impress:stepleave", function () {
+                    steps[i+1] && initCodeMirrorInstances(steps[i+1]);
+                });
+                step.addEventListener("impress:stepenter", function () {
+                    initCodeMirrorInstances(step);
+                });
             });
-            step.addEventListener("impress:stepenter", function () {
-                initCodeMirrorInstances(step);
-            });
-        });        
+        }
+        else {
+            steps.forEach(initCodeMirrorInstances);
+        }
     });
+
 })(CodeMirror);
