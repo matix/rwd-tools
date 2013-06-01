@@ -105,7 +105,7 @@ nav .navigation li:hover {
   position: absolute;
   width: 5000px;
 
-  transition:         all 1s;
+  transition: all 1s;
 }
 
 .jumbotron .slide {
@@ -123,14 +123,21 @@ nav .navigation li:hover {
   height: 100%;
 
   cursor: pointer;
+
+  transition: opacity 300ms;
+  opacity: 0;
+}
+
+.jumbotron:hover .arrow {
+  opacity: 1;
 }
 
 .jumbotron .next {
-  right: 0;
+  right: 10px;
   background-image: url("../images/next.png");
 }
 .jumbotron .prev {
-  left: 0;
+  left: 10px;
   background-image: url("../images/prev.png");
 }
 
