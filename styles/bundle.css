@@ -126,6 +126,7 @@ body {
   font-family: 'Roboto Slab', serif;
   min-height: 740px;
   background-image: url('../images/bg.jpg');
+  background-color: #aaa;
 }
 body.impress-supported {
   background-repeat: no-repeat;
@@ -247,9 +248,12 @@ a:focus {
   font-size: 48px;
   line-height: 1.5;
 }
+.impress-enabled .step.past {
+  opacity: 0.4;
+}
 .impress-enabled .step {
   margin: 0;
-  opacity: 0.3;
+  opacity: 0;
   -webkit-transition: opacity 1s;
   -moz-transition: opacity 1s;
   -ms-transition: opacity 1s;
