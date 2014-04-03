@@ -85,20 +85,6 @@
     opacity: 1;
 }
 
-
-#intro {
-    .devices {
-        position: relative;
-        font-size: 10em;
-        margin-top: 0.3em;
-
-        .icon-desktop      { color: #C9A074; font-size: 1em;    }
-        .icon-laptop       { color: #57C7A8; font-size: 0.75em; }
-        .icon-tablet       { color: #C7578D; font-size: 0.3em;  }
-        .icon-mobile-phone { color: #9972C4; font-size: 0.1em;  }
-    }
-}
-
 #definition {
     p {
         line-height: 1.6em;
@@ -215,9 +201,7 @@
 
 #fg-table-layout {
     h1 {
-      -webkit-animation: color 200ms;
-      -moz-animation: color 200ms;
-      animation: color 200ms;
+      .transition(~"color 200ms");
     }
     &.step-1 {
       h1 { color: white};
@@ -251,6 +235,14 @@
 
 #ri-booya {
     .style { color: #FF007A;}
+}
+
+#ri-retina{
+  #twitter-widget-0 {
+    width: 500px;
+    height: 450px;
+    margin: 0 auto !important;
+  }
 }
 
 .impress-on-overview {
