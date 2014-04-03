@@ -311,27 +311,6 @@ a:focus {
 .impress-supported .step-1 .s1, .impress-supported .step-2 .s2, .impress-supported .step-3 .s3, .impress-supported .step-4 .s4, .impress-supported .step-5 .s5, .impress-supported .step-6 .s6, .impress-supported .step-7 .s7, .impress-supported .step-8 .s8, .impress-supported .step-9 .s9, .impress-supported .step-10 .s10 {
   opacity: 1;
 }
-#intro .devices {
-  position: relative;
-  font-size: 10em;
-  margin-top: 0.3em;
-}
-#intro .devices .icon-desktop {
-  color: #C9A074;
-  font-size: 1em;
-}
-#intro .devices .icon-laptop {
-  color: #57C7A8;
-  font-size: 0.75em;
-}
-#intro .devices .icon-tablet {
-  color: #C7578D;
-  font-size: 0.3em;
-}
-#intro .devices .icon-mobile-phone {
-  color: #9972C4;
-  font-size: 0.1em;
-}
 #definition p {
   line-height: 1.6em;
 }
@@ -364,6 +343,12 @@ a:focus {
 }
 #not-mobile [class*="icon-"] {
   color: #5D9FCA;
+}
+#only-web .icon-globe {
+  color: #526DD8;
+}
+#only-web p.s2 {
+  color: #aaa;
 }
 .icon-cogs {
   color: #007AFF;
@@ -423,13 +408,26 @@ a:focus {
 #mq-features .features td {
   padding: 0.1em 0.5em;
 }
+#fg-table-layout h1 {
+  -webkit-transition: color 200ms;
+  -moz-transition: color 200ms;
+  -ms-transition: color 200ms;
+  -o-transition: color 200ms;
+  transition: color 200ms;
+}
+#fg-table-layout.step-1 h1 {
+  color: #ffffff;
+}
 #fg-table-layout .image {
-  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 100%;
   overflow: hidden;
-  max-height: 70%;
 }
 #fg-table-layout .image img {
-  width: 100%;
+  height: 100%;
 }
 #fg-many-options {
   text-align: center;
@@ -446,6 +444,11 @@ a:focus {
 }
 #ri-booya .style {
   color: #FF007A;
+}
+#ri-retina #twitter-widget-0 {
+  width: 500px;
+  height: 450px;
+  margin: 0 auto !important;
 }
 .impress-on-overview .step[id*="intro"] {
   opacity: 1;

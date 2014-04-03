@@ -5,15 +5,27 @@
     <meta name="viewport" content="width=1024" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <title>Responsive Web Design - Tools and Techniques</title>
-    
+
     <meta name="description" content="" />
     <meta name="author" content="Matias Figueroa" />
 
     <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300' rel='stylesheet' type='text/css'>
     <link href="styles/bundle.css" rel="stylesheet" />
-    
+
     <link rel="shortcut icon" href="favicon.png" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      if(window.location.hostname == "matix.github.io") {
+        ga('create', 'UA-38720353-3', 'matix.github.io');
+        ga('send', 'pageview');
+      }
+    </script>
 </head>
 
 <body class="impress-not-supported">
@@ -27,30 +39,27 @@
     <div id="intro" class="step slide" data-x="0" data-y="0">
         <h1>Responsive Web Design</h1>
         <h2>Tools and Techniques</h2>
-        <div class="devices">
-            <i class="icon-desktop"></i>
-            <i class="icon-laptop"></i>
-            <i class="icon-tablet"></i>
-            <i class="icon-mobile-phone"></i>
-        </div>
+        <img src="images/rwd.png" class="image slide-icon" alt="Responsive Web Design">
     </div>
 
     <div id="about" class="step slide" data-x="prev+960/2+10" data-z="960/2" data-rotate-y="-90">
         <h1>Matias Figueroa</h1>
-        <h2>UI/UX Developer</h2>
+        <h2>UI Developer</h2>
         <h2>Software Designer @ Globant</h2>
         <h2>Likes to make stuff...</h2>
         <br>
         <p><a href="mailto:matias.figueroa@globant.com" target="_blank"><i class="icon-envelope-alt"></i> matias.figueroa@globant.com</a></p>
         <p><a href="https://twitter.com/matixfigueroa" target="_blank"><i class="icon-twitter"></i> @matixfigueroa</a></p>
         <p><a href="https://github.com/matix" target="_blank"><i class="icon-github"></i> github.com/matix</a></p>
+        <p><a href="https://matixfigueroa.com" target="_blank"><i class="icon-link"></i> matixfigueroa.com</a></p>
 
         <div class="icon-user icon-6 icon-4x slide-icon"></div>
+        <img src="images/qr-matixfigueroa.com.png" alt="matixfigueroa.com">
     </div>
 
     <div id="definition" class="step slide" data-x="prev+960/2+10" data-z="prev+960/2" data-rotate-y="0" data-steps="2">
         <h1>What's Responsive Web Design?</h1>
-        <p class="s1"> Responsive Web Design (RWD) is a <strong>Design Strategy</strong> that aims to provide 
+        <p class="s1"> Responsive Web Design (RWD) is a <strong>Design Strategy</strong> that aims to provide
             a deeply <strong>contextualized</strong> experience for the user regardless
             of the <strong>consumption device</strong> that is currently being used to access our <strong>site</strong>.
         </p>
@@ -71,6 +80,16 @@
         <h1 class="s2">&ne;</h1>
         <p class="s2"><i class="icon-asterisk icon-6 icon-4x"></i></p>
         <p class="s2"><strong>Responsive</strong> Design is centered on <strong>context</strong>.</p>
+    </div>
+
+    <div id="only-web" class="step slide centered" data-x="prev+960+10" data-rotate-y="0" data-z="prev" data-steps="2">
+        <h1>
+          <i class="icon-globe icon-2x"></i>
+          <br>This talk is about
+          <br><strong>The Web</strong>.
+        </h1>
+        <h2 class="s1">Responsive Design is also applicable to Native Mobile Apps.</h2>
+        <p class="s2">(That's another talk.)</p>
     </div>
 
     <div id="the-basics" class="step slide centered" data-x="prev+960+10" data-rotate-y="0" data-z="prev" data-steps="5">
@@ -147,25 +166,25 @@
             ...
             </html>
         </textarea>
-    </div>    
+    </div>
 
     <div id="modernizr-profit" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
         <h1>Profit!</h1>
         <textarea data-codemirror="true" data-read-only="true">
-            <html class=" js flexbox flexboxlegacy canvas 
-            canvastext webgl no-touch geolocation postmessage 
-            websqldatabase indexeddb hashchange history 
-            draganddrop websockets rgba hsla multiplebgs 
-            backgroundsize borderimage borderradius boxshadow 
-            textshadow opacity cssanimations csscolumns 
-            cssgradients cssreflections csstransforms 
-            csstransforms3d csstransitions fontface 
-            generatedcontent video audio localstorage 
-            sessionstorage webworkers applicationcache 
+            <html class=" js flexbox flexboxlegacy canvas
+            canvastext webgl no-touch geolocation postmessage
+            websqldatabase indexeddb hashchange history
+            draganddrop websockets rgba hsla multiplebgs
+            backgroundsize borderimage borderradius boxshadow
+            textshadow opacity cssanimations csscolumns
+            cssgradients cssreflections csstransforms
+            csstransforms3d csstransitions fontface
+            generatedcontent video audio localstorage
+            sessionstorage webworkers applicationcache
             svg inlinesvg smil svgclippaths">
             ...
         </textarea>
-    </div> 
+    </div>
 
     <div id="modernizr-profit-2" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
         <div data-codemirror="true" data-read-only="true" data-mode="css">
@@ -182,7 +201,7 @@
                        box-shadow: #666 1px 1px 1px;
         }
         </div>
-    </div>    
+    </div>
 
     <div id="modernizr-js" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
         <h1>Detect, Use/Degrade:</h1>
@@ -191,13 +210,13 @@
                 localstorage.setItem("lastUser", currentUser);
             }
             else {
-                // Optional, don't scare your users 
+                // Optional, don't scare your users
                 // if is not important!
                 showWarning("Your browser is not able "
                             +"to remember your session.");
             }
         </div>
-    </div>    
+    </div>
 
     <div id="modernizr-js-2" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
         <h1>Detect, Polyfill, Use:</h1>
@@ -227,7 +246,7 @@
         <h1><i class="icon-css3"></i> Media queries</h1>
     </div>
 
-    <div id="mq-atmedia" class="step slide centered" data-x="prev+960/2+10" data-y="prev" data-z="prev+960/2" 
+    <div id="mq-atmedia" class="step slide centered" data-x="prev+960/2+10" data-y="prev" data-z="prev+960/2"
                                                      data-steps="3" data-substep-action="replace">
         <h1 class="base"> @media</h1>
         <h1 class="s1"> @media <span class="mq">screen</span></h1>
@@ -263,7 +282,7 @@
         </table>
         <br>
         <p class="s6">This is not carved in stone... research your target breakpoints.</p>
-    </div>    
+    </div>
 
     <div id="mq-breakpoints-2" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev" data-steps="2">
         <h1>Careful...</h1>
@@ -292,7 +311,7 @@
 
         <br>
         <p class="s2">...devices lie... sometimes twice.</p>
-    </div>    
+    </div>
 
     <div id="mq-breakpoints-3" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev" data-steps="2">
         <h1>Actually...</h1>
@@ -320,7 +339,7 @@
         </table>
         <br>
         <p class="s2">We care about <strong>context</strong>, not <strong>devices</strong>.</p>
-    </div>    
+    </div>
 
     <div id="mq-example" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
         <div data-codemirror="true" data-read-only="true" data-mode="css">
@@ -364,7 +383,7 @@
         <!doctype html>
         <head>
             <link href="base.css" ...>
-            <link href="1024.css" 
+            <link href="1024.css"
                   media="screen and (min-width:1024px)" ...>
             <link href="800.css"
                   media="screen and (min-width:800px)"  ...>
@@ -402,7 +421,7 @@
                 <td>grid</td>
             </tr>
         </table>
-        
+
         <br>
         <p class="s1"> ... and more coming...</p>
     </div>
@@ -410,11 +429,11 @@
     <div id="mq-links" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
         <p>Mozilla Developer Network</p>
         <p><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries" target="_blank">Media Queries on MDN</a></p>
-        
+
         <br>
         <p>W3C Reference Docs</p>
         <p><a href="http://www.w3.org/TR/css3-mediaqueries/" target="_blank">Media Queries W3C RFC</a></p>
-        
+
         <br>
         <p>Mediaqueri.es</p>
         <p><a href="http://mediaqueri.es/" target="_blank">Showcase</a></p>
@@ -453,12 +472,12 @@
         </ul>
         <br>
         <p class="etc">... etc ...</p>
-    </div>    
+    </div>
 
     <div id="fg-example-bootstrap" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
         <img src="images/bootstrap-logo.png">
     </div>
-    
+
     <div id="fg-example-bootstrap-2" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
         <textarea data-codemirror="true" data-read-only="true">
             <div class="row-fluid">
@@ -481,7 +500,7 @@
                 <div class="span12">12</div>
             </div>
         </textarea>
-    </div>    
+    </div>
 
     <div id="fg-example-bootstrap-demo" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
         <p>See it in action:</p>
@@ -514,7 +533,7 @@
               <div class="large-6 columns">...</div>
             </div>
         </textarea>
-    </div>   
+    </div>
 
     <div id="fg-example-foundation-demo" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
         <p>See it in action:</p>
@@ -546,9 +565,9 @@
         <textarea class="s1" data-codemirror="true" data-read-only="true">
             <picture alt="description">
               <source src="small.jpg">
-              <source src="medium.jpg" 
+              <source src="medium.jpg"
                       media="(min-width: 400px)">
-              <source src="large.jpg" 
+              <source src="large.jpg"
                       media="(min-width: 800px)">
             </picture>
         </textarea>
@@ -573,9 +592,9 @@
         <textarea data-codemirror="true" data-read-only="true">
             <div data-picture data-alt="description">
                 <div data-src="small.jpg"></div>
-                <div data-src="medium.jpg"     
+                <div data-src="medium.jpg"
                      data-media="(min-width: 400px)"></div>
-                <div data-src="large.jpg"     
+                <div data-src="large.jpg"
                      data-media="(min-width: 800px)"></div>
 
                 <!-- Fallback for non-JS browsers. -->
@@ -586,7 +605,7 @@
             ...
             <script src="picturefill.js"></script>
         </textarea>
-    </div> 
+    </div>
 
     <div id="ri-srcset" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
         <h1>srcset-polyfill</h1>
@@ -597,7 +616,7 @@
                 ...
                 <script src="srcset.js"></script>
         </textarea>
-    </div>    
+    </div>
 
     <div id="ri-bg-images" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
         <h1>Background Images</h1>
@@ -622,6 +641,12 @@
         </textarea>
     </div>
 
+    <div id="ri-retina" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
+      <h1>Retina Displays</h1>
+      <blockquote class="twitter-tweet" lang="en"><p>This might be the greatest slide on Responsive Design Out there: <a href="http://t.co/nBZdSJDP2V">pic.twitter.com/nBZdSJDP2V</a></p>&mdash; Matias Figueroa (@matixfigueroa) <a href="https://twitter.com/matixfigueroa/statuses/346721705693167617">June 17, 2013</a></blockquote>
+      <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+    
     <div id="ri-bg-images-hidpi" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
         <h1>Background Images (HiDPI)</h1>
         <textarea data-codemirror="true" data-read-only="" data-mode="css">
@@ -629,9 +654,9 @@
               background-image: url('lowres.png');
             }
 
-            @media all and 
+            @media all and
               (-webkit-min-device-pixel-ratio: 1.5) {
-              
+
               #logo {
                 background-image: url('hires.png');
                 background-size: 200px 100px;
@@ -680,6 +705,7 @@
         <p>These slides:</p>
         <p><a href="https://github.com/matix/rwd-tools"><i class="icon-github"></i> github.com/matix/rwd-tools</a></p>
         <p><a href="http://matix.github.io/rwd-tools"><i class="icon-link"></i> matix.github.io/rwd-tools</a></p>
+        <img src="images/qr-matix.github.io-rwd-tools.png" alt="matix.github.io/rwd-tools" />
     </div>
 
     <div id="overview" class="step" data-x="1500" data-y="1500" data-z="4500" data-scale="9" data-rotate-y="-90">
@@ -692,7 +718,7 @@
 </div>
 
 <script>
-if ("ontouchstart" in document.documentElement) { 
+if ("ontouchstart" in document.documentElement) {
     document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
 }
 </script>
