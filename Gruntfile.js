@@ -80,6 +80,23 @@ module.exports = function(grunt) {
         tasks: ['less:styles', "concat:styles"]
       }
     },
+    connect: {
+      server: {
+        options: {
+          port: 9001,
+          base: '.'
+        }
+      }
+    },
+    concurrent: {
+      'dev-run': {
+        options: {
+          grunt:true,
+          logConcurrentOutput: true
+        },
+        tasks: ['watch', 'connect:server:keepalive']
+      }
+    },
     publish: {
       "gh-pages": {
         dest: "gh-pages",
@@ -88,7 +105,7 @@ module.exports = function(grunt) {
           "styles/font-awesome/font/**.*",
           "styles/font-awesome/css/font-awesome.css",
           "styles/bundle.css",
-          "js/bundle.js", 
+          "js/bundle.js",
           "demos/**/**.*",
           "index.html",
           "README.md"
@@ -103,6 +120,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-less');
+  grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-concurrent');
 
   // Publish distrubution files
   grunt.registerMultiTask("publish", function () {
@@ -117,6 +136,8 @@ module.exports = function(grunt) {
 
   // Default task.
   grunt.registerTask('build', ['jshint', 'less', 'concat']);
+  grunt.registerTask('run', ['build', "connect:server:keepalive"]);
+  grunt.registerTask('dev-run', ["concurrent:dev-run"]);
   grunt.registerTask('default', ['build']);
 
 };
