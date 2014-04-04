@@ -143,7 +143,22 @@
         <h1><i class="icon-cogs"></i> Feature Detection</h1>
     </div>
 
-    <div id="modernizr" class="step slide centered" data-x="prev+960/2+10" data-y="prev" data-z="prev+960/2">
+    <div id="fd-versus" class="step slide centered" data-x="prev+960/2+10" data-y="prev" data-z="prev+960/2" data-steps="8">
+      <h2>Browser Sniffing</h2>
+      <p class="s1">Are you using Chrome v32.0 on Mac?</p>
+      <textarea class="s2" data-codemirror="true" data-read-only="true" data-mode="javascript">
+        window.navigator.userAgent.indexOf("Chrome") > -1
+      </textarea>
+      <h2 class="s3">vs.</h2>
+      <h2 class="s4">Feature Detection</h2>
+      <p class="s5">Does your browser support html5 video?</p>
+      <textarea class="s6" data-codemirror="true" data-read-only="true" data-mode="javascript">
+        !!document.createElement('video').canPlayType
+      </textarea>
+      <img class="s7 slide-icon" src="images/waitwhat.png" alt="Wait... What?">
+    </div>
+
+    <div id="modernizr" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
         <img src="images/modernizr-logo.png" alt="Modernizr Logo">
     </div>
 
@@ -646,7 +661,7 @@
       <blockquote class="twitter-tweet" lang="en"><p>This might be the greatest slide on Responsive Design Out there: <a href="http://t.co/nBZdSJDP2V">pic.twitter.com/nBZdSJDP2V</a></p>&mdash; Matias Figueroa (@matixfigueroa) <a href="https://twitter.com/matixfigueroa/statuses/346721705693167617">June 17, 2013</a></blockquote>
       <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
-    
+
     <div id="ri-bg-images-hidpi" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
         <h1>Background Images (HiDPI)</h1>
         <textarea data-codemirror="true" data-read-only="" data-mode="css">
