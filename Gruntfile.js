@@ -19,7 +19,8 @@ module.exports = function(grunt) {
               'node_modules/codemirror/mode/css/css.js',
               'node_modules/codemirror/mode/javascript/javascript.js',
               'node_modules/codemirror/mode/htmlmixed/htmlmixed.js',
-              'js/codemirror.bootstrap.js'
+              'js/codemirror.bootstrap.js',
+              'js/icon-fonts-demo.js'
               ],
         dest: 'js/bundle.js'
       },
