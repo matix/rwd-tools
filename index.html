@@ -1088,4 +1088,14 @@ if ("ontouchstart" in document.documentElement) {
     impress.preprocess();
     impress().init();
 </script>
+<script type="text/javascript">
+  Array.prototype.slice.call(
+    document.getElementsByClassName("step")
+  ).forEach(function(step) {
+    //Track step view:
+    step.addEventListener("impress:stepenter", function() {
+      ga && ga("send", "event", "slide", "view", step.id, 1);
+    });
+  });
+</script>
 </html>
