@@ -383,23 +383,23 @@ a:focus {
 }
 #mq-breakpoints [class*="icon-"],
 #mq-breakpoints-2 [class*="icon-"],
-#mq-breakpoints-3 [class*="icon-"] {
+#mq-breakpoints-4 [class*="icon-"] {
   font-size: 1.2em;
   color: #FF7A00;
 }
 #mq-breakpoints .breakpoints td,
 #mq-breakpoints-2 .breakpoints td,
-#mq-breakpoints-3 .breakpoints td {
+#mq-breakpoints-4 .breakpoints td {
   padding: 2px;
 }
 #mq-breakpoints .breakpoints td .mq,
 #mq-breakpoints-2 .breakpoints td .mq,
-#mq-breakpoints-3 .breakpoints td .mq {
+#mq-breakpoints-4 .breakpoints td .mq {
   margin-left: 1em;
 }
 #mq-breakpoints .breakpoints td .hl,
 #mq-breakpoints-2 .breakpoints td .hl,
-#mq-breakpoints-3 .breakpoints td .hl {
+#mq-breakpoints-4 .breakpoints td .hl {
   color: #FF7A00;
 }
 #mq-features .features {
@@ -449,6 +449,69 @@ a:focus {
   width: 500px;
   height: 450px;
   margin: 0 auto !important;
+}
+#ri-icon-fonts i[class*=icon-] {
+  color: black;
+  cursor: pointer;
+  -webkit-transition: all 250ms;
+  -moz-transition: all 250ms;
+  -ms-transition: all 250ms;
+  -o-transition: all 250ms;
+  transition: all 250ms;
+  display: inline-block;
+}
+#ri-icon-fonts .icons:hover i[class*=icon-] {
+  color: #ccc;
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  transform: scale(0.8);
+}
+#ri-icon-fonts .icons i[class*=icon-]:hover {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  transform: scale(1.2);
+  color: #FF007A;
+}
+#ri-icon-fonts .sample {
+  display: inline-block;
+  font-size: 40px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+#ri-icon-fonts .CodeMirror {
+  background: transparent;
+}
+#ri-icon-fonts .colors {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+#ri-icon-fonts .colors .color {
+  padding: 5px;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+#ri-icon-fonts .colors .color[data-color=green] {
+  background-color: green;
+}
+#ri-icon-fonts .colors .color[data-color=red] {
+  background-color: red;
+}
+#ri-icon-fonts .colors .color[data-color=blue] {
+  background-color: blue;
+}
+#ri-icon-fonts .colors .color[data-color=black] {
+  background-color: black;
+}
+#ri-icon-fonts .colors .color[data-color=orange] {
+  background-color: orange;
+}
+#ri-icon-fonts .colors .color[data-color=white] {
+  background-color: white;
 }
 .impress-on-overview .step[id*="intro"] {
   opacity: 1;
