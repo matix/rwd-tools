@@ -328,7 +328,26 @@
         <p class="s2">...devices lie... sometimes twice.</p>
     </div>
 
-    <div id="mq-breakpoints-3" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev" data-steps="2">
+    <div id="mq-breakpoints-3" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
+      <h1>... or just</h1>
+      <textarea data-codemirror="true" data-readOnly="true">
+        <!doctype html>
+        <html>
+        <head>
+            ...
+            <meta
+              name="viewport"
+              content="width=device-width,
+                       initial-scale=1,
+                       maximum-scale=1">
+        </head>
+        ...
+        </html>
+      </textarea>
+      <p>and forget about it.</p>
+    </div>
+
+    <div id="mq-breakpoints-4" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev" data-steps="2">
         <h1>Actually...</h1>
         <table class="breakpoints s1">
             <tr>
@@ -337,15 +356,15 @@
             </tr>
             <tr>
                 <td><i class="icon-asterisk"></i></td>
-                <td><span class="mq">@media screen and (min-device-width: 1024px)</span></td>
+                <td><span class="mq">@media screen and (min-width: 1024px)</span></td>
             </tr>
             <tr>
                 <td><i class="icon-asterisk"></i></td>
-                <td><span class="mq">@media screen and (min-device-width: 960px)</span></td>
+                <td><span class="mq">@media screen and (min-width: 960px)</span></td>
             </tr>
             <tr>
                 <td><i class="icon-asterisk"></i></td>
-                <td><span class="mq">@media screen and (min-device-width: 800px)</span></td>
+                <td><span class="mq">@media screen and (min-width: 800px)</span></td>
             </tr>
             <tr>
                 <td><i class="icon-asterisk"></i></td>
@@ -358,7 +377,7 @@
 
     <div id="mq-example" class="step slide centered" data-x="prev+960+10" data-y="prev" data-z="prev">
         <div data-codemirror="true" data-read-only="true" data-mode="css">
-        @media screen and (min-device-width: 1024px) {
+        @media screen and (min-width: 1024px) {
             /* Widescreen */
             body {
                 font-size: 1.5em;
